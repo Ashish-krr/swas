@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to SWapna SArthi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: rgb(230, 235, 202);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .login-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        input[type="email"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%; /* Adjusted width for single button */
+        }
+        .login-farmer {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        p {
+            margin-top: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ab.jpg" alt="SWapna SArthi Logo" class="logo">
+    </header>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login to SWapna SArthi</h1>
+            <input type="email" id="email" placeholder="Enter your email">
+            <input type="password" id="password" placeholder="Enter your password">
+            <div class="buttons">
+                <button class="login-farmer" onclick="login()">Login as farmer</button>
+            </div>
+            <p>Not registered? <a href="register_as_farmer.html">Register as Farmer</a> | <a href="register_as_consumer.html">Register as Consumer</a></p>
+            <footer>
+                <p>&copy; 2024 SWapna SArthi. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle login and check data in Local Storage
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve the stored farmer user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem('farmerUser'));
+
+            if (storedUser) {
+                const storedEmail = storedUser.email;
+                const storedPassword = storedUser.password;
+
+                // Validate the email and password with the stored values
+                if (email === storedEmail && password === storedPassword) {
+                    
+                    // Redirect to farmer dashboard after successful login
+                    window.location.href = 'framer_dashboard.html';
+                } else {
+                    alert('Incorrect email or password. Please try again.');
+                }
+            } else {
+                alert('No user registered with these details. Please register first.');
+            }
+        }
+    </script>
+</body>
+</html>

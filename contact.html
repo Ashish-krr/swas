@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Swapna SARthi</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form,
+.contact-info {
+    width: 45%;
+}
+
+.contact-form h2,
+.contact-info h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.contact-form p,
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    padding-left: 20px;
+}
+
+.contact-info .map iframe {
+    margin-top: 15px;
+    border: none;
+}
+
+.follow-us {
+    margin-top: 20px;
+}
+
+.follow-us p {
+    font-size: 16px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.faq-section {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #e2e2e2;
+    border-radius: 3px;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.faq h2{
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 100px;
+    color:#007BFF;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need help, feel free to contact us via the form below or through the other
+                channels provided.</p>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Address:</strong> lab 11 phase 3 building, Techno Main Salt Lake, Sector V, Kolkata-700098</p>
+            <p><strong>Email:</strong> <a href="mailto:Swapnasarathi001@gmail.com">Swapnasarathi001@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 6294361166</p>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.2232928405945!2d88.42259807642936!3d22.572505536908098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277562d32fb01%3A0x50fcb5d9d26d0ae1!2sTechno%20India%20Main!5e0!3m2!1sen!2sin!4v1695983308331!5m2!1sen!2sin"
+                    width="300" height="200" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <p>Social Media Links</p>
+            </div>
+        </div>
+        <section class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">What is the return policy?</div>
+                    <div class="faq-answer">Our return policy allows you to return items within 30 days of purchase.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long does shipping take?</div>
+                    <div class="faq-answer">Shipping typically takes 5-7 business days.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer customer support?</div>
+                    <div class="faq-answer">Yes, we offer 24/7 customer support via email and phone.</div>
+                </div>
+            </div>
+            <script>
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        question.classList.toggle('active');
+                    });
+                });
+            </script>
+        </section>
+        <div class="image"><img
+                src="https://image.shutterstock.com/image-vector/robot-antenna-logo-template-600w-1445148980.jpg"
+                alt="chatbot"></div>
+    </div>
+    <script >
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  if (name === "" || email === "" || message === "") {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+  // Simple form submission simulation (Replace this with an actual API call if needed)
+  console.log("Form submitted:");
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+
+  alert("Thank you for your message!");
+
+  // Clear form after submission
+  document.getElementById("contactForm").reset();
+});
+    </script>
+    
+
+</body>
+
+</html>

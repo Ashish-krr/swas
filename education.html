@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Education Dashboard</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.card-container, .card-container2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+    color: #4CAF50;
+    margin: 15px 0;
+}
+
+.card p {
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Farming Techniques & Technology</h1>
+        <nav>
+            <ul>
+                <li><a href="#techniques">Farming Techniques</a></li>
+                <li><a href="#technology">Farming Technology</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="techniques">
+        <h2>Farming Techniques</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="imagesorganic-farming.jpg" alt="Organic Farming">
+                <h3>Organic Farming</h3>
+                <p>Learn how to grow crops without synthetic fertilizers or pesticides to improve soil health and produce quality.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="card">
+                <img src="imagesprecision-farming.jpg" alt="Precision Farming">
+                <h3>Precision Farming</h3>
+                <p>Optimize resource use by using technology like GPS and sensors to increase efficiency and reduce waste.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="card">
+                <img src="imageshydroponics.jpg" alt="Hydroponics">
+                <h3>Hydroponics</h3>
+                <p>Discover the method of growing plants in water-based nutrient solutions, allowing crops to grow without soil.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology">
+        <h2>Farming Technology</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="imagesdrone-farming.jpg" alt="Drone Farming">
+                <h3>Drone Technology</h3>
+                <p>Monitor crops and manage fields more efficiently with drones, reducing manual labor and improving yield.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/81yluuX-E7L._AC_UF1000,1000_QL80_.jpg" alt="Smart Irrigation">
+                <h3>Smart Irrigation</h3>
+                <p>Use sensor-based irrigation systems to manage water use efficiently and avoid wastage in the farming process.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="card">
+                <img src="spriklerirrigation.jpg" alt="Sprinkler Irrigation">
+                <h3>Sprinkler Irrigation</h3>
+                <p>Sprinkler irrigation distributes water evenly over crops by spraying it through the air, mimicking natural rainfall.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section id="Awareness">
+        <h2>Awareness</h2>
+        <div class="card-container2">
+            <div class="card">
+                <img src="aware1.jpg" alt="awareness">
+            </div>
+            <div class="card">
+                <img src="aware2.jpg" alt="awareness">
+            </div>
+            <div class="card">
+                <img src="aware3.jpg" alt="awareness">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Farmer's Education Platform</p>
+    </footer>
+
+    <script src="edudash.js"></script>
+</body>
+</html>
