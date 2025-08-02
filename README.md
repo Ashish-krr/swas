@@ -1,2 +1,2 @@
 # swas
-farners and consumers
+farmers and consumers
